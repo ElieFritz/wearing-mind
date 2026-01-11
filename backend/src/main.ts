@@ -19,5 +19,6 @@ async function bootstrap() {
   
   console.log(`Backend is running on: http://localhost:${port}`);
   console.log(`API endpoints available at: http://localhost:${port}/api`);
+  // Auto-deploy configured via GitHub webhook
 }
 bootstrap();
