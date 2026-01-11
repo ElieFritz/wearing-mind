@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  /* Wearing Mind Palette */
+  --brand-primary: #1E2A5A;  /* Deep Blue */
+  --brand-secondary: #F8F8FA; /* Off-white */
+  --brand-accent: #3B4D80;   /* Light Blue interaction */
+  
+  --background: #FFFFFF;
+  --foreground: #1E2A5A;     /* Primary text is Deep Blue */
+  --muted: #64748B;          /* Slate 500 equivalent */
+  
+  --font-geist-sans: "Geist Sans", sans-serif;
+  --font-geist-mono: "Geist Mono", monospace;
+}
+
+@theme inline {
+  --color-brand: var(--brand-primary);
+  --color-brand-light: var(--brand-secondary);
+  --color-brand-accent: var(--brand-accent);
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animations Utilities */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
