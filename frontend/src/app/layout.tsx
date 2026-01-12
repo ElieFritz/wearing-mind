@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://frontend-iota-flax-11.vercel.app'),
+  metadataBase: new URL("https://frontend-iota-flax-11.vercel.app"),
   title: {
     default: "WEARING MIND | Premium Streetwear & Sustainable Fashion",
     template: "%s | WEARING MIND"
@@ -72,13 +72,13 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: "your-google-verification-code",
   },
 };
 
@@ -105,7 +105,7 @@ export default function RootLayout({
               "url": "https://frontend-iota-flax-11.vercel.app",
               "logo": "https://frontend-iota-flax-11.vercel.app/images/logo.png",
               "image": "https://frontend-iota-flax-11.vercel.app/images/og-image.jpg",
-              "priceRange": "€€",
+              "priceRange": "EUR",
               "address": {
                 "@type": "PostalAddress",
                 "addressCountry": "PT"
