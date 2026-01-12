@@ -4,25 +4,6 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ProductCard } from '@/components/ProductCard';
 import { productsApi } from '@/lib/api';
-import type { Metadata } from "next";
-
-// Metadata for SEO (will be moved to generateMetadata in production)
-export const metadata: Metadata = {
-  title: "Shop Premium Streetwear | Hoodies, T-Shirts & Sweatshirts",
-  description: "Browse our complete collection of sustainable streetwear. Premium hoodies, organic cotton t-shirts, and exclusive sweatshirts. Filter by category. Ethically made. Limited quantities available.",
-  keywords: [
-    "buy streetwear online",
-    "premium hoodies shop",
-    "organic t-shirts",
-    "sustainable sweatshirts",
-    "ethical clothing store",
-    "limited edition fashion"
-  ],
-  openGraph: {
-    title: "Shop WEARING MIND Collection",
-    description: "Explore our sustainable streetwear collection. Premium quality, ethically made.",
-  },
-};
 
 const FILTERS = ['All', 'Hoodie', 'T-Shirt', 'Sweatshirt'];
 
@@ -47,7 +28,6 @@ export default function ShopPage() {
       setProducts(response.data || []);
     } catch (error) {
       console.error('Failed to fetch products:', error);
-      // Fallback data
       setProducts([
         { id: '1', name: 'Mind Hoodie Black', price: 120, category: 'Hoodie', isNew: true, images: ['/images/products/hoodie-black.jpg'] },
         { id: '2', name: 'Logo Tee White', price: 55, category: 'T-Shirt', isNew: false, images: ['/images/products/tee-white.jpg'] },
