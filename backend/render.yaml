@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: wearing-mind-backend
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start:prod
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
