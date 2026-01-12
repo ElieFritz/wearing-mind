@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     default: "WEARING MIND | Premium Streetwear & Sustainable Fashion",
     template: "%s | WEARING MIND"
   },
-  description: "Discover WEARING MIND's exclusive collection of sustainable streetwear. Premium hoodies, t-shirts, and sweatshirts crafted with consciousness. Limited edition drops. Ethically made in Portugal.",
+  description: "Discover WEARING MIND exclusive collection of sustainable streetwear. Premium hoodies, t-shirts, and sweatshirts crafted with consciousness. Limited edition drops. Ethically made in Portugal.",
   keywords: [
     "streetwear",
     "sustainable fashion",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     url: "https://frontend-iota-flax-11.vercel.app",
     siteName: "WEARING MIND",
     title: "WEARING MIND | Premium Streetwear & Sustainable Fashion",
-    description: "Exclusive sustainable streetwear collection. Premium hoodies, t-shirts & sweatshirts. Ethically made with organic cotton.",
+    description: "Exclusive sustainable streetwear collection. Premium hoodies, t-shirts and sweatshirts. Ethically made with organic cotton.",
     images: [
       {
         url: "/images/og-image.jpg",
@@ -87,6 +87,25 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    name: "WEARING MIND",
+    description: "Premium sustainable streetwear brand offering exclusive collections of hoodies, t-shirts, and sweatshirts.",
+    url: "https://frontend-iota-flax-11.vercel.app",
+    logo: "https://frontend-iota-flax-11.vercel.app/images/logo.png",
+    image: "https://frontend-iota-flax-11.vercel.app/images/og-image.jpg",
+    priceRange: "EUR",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "PT"
+    },
+    sameAs: [
+      "https://instagram.com/wearingmind",
+      "https://twitter.com/wearingmind"
+    ]
+  };
+
   return (
     <html lang="en">
       <head>
@@ -96,26 +115,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#1E2A5A" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "ClothingStore",
-              "name": "WEARING MIND",
-              "description": "Premium sustainable streetwear brand offering exclusive collections of hoodies, t-shirts, and sweatshirts.",
-              "url": "https://frontend-iota-flax-11.vercel.app",
-              "logo": "https://frontend-iota-flax-11.vercel.app/images/logo.png",
-              "image": "https://frontend-iota-flax-11.vercel.app/images/og-image.jpg",
-              "priceRange": "EUR",
-              "address": {
-                "@type": "PostalAddress",
-                "addressCountry": "PT"
-              },
-              "sameAs": [
-                "https://instagram.com/wearingmind",
-                "https://twitter.com/wearingmind"
-              ]
-            })
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
       <body
