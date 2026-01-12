@@ -45,15 +45,6 @@ export function FeaturedCollection() {
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
-    }
-  };
-
   if (loading) {
     return (
       <section className="py-20 px-6 bg-[#F8F8FA]">
@@ -101,14 +92,20 @@ export function FeaturedCollection() {
         {/* Products Grid */}
         {products.length > 0 ? (
           <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-100px" }}
+            transition={{ staggerChildren: 0.1, delayChildren: 0.2 }}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12"
           >
             {products.map((product, index) => (
-              <motion.div key={product.id} variants={itemVariants}>
+              <motion.div
+                key={product.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
                 <ProductCard
                   id={product.id}
                   name={product.name}

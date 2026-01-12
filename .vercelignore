@@ -1,0 +1,12 @@
+.vs
+*.vsidx
+*.suo
+*.user
+*.slnx
+backend
+database
+*.ps1
+*.js
+*.md
+*.sql
+.git

@@ -48,52 +48,76 @@ export function BrandStory() {
                WEARING MIND is not just a brand, it is a state of being.
              </motion.p>
              
-             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
-                {/* Sustainable */}
+             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                {/* Hoodies */}
                 <motion.div 
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.4 }}
+                  transition={{ delay: 0.3 }}
                   className="relative group"
                 >
                    <div className="aspect-[4/3] overflow-hidden rounded-sm mb-4 relative">
                       <Image
-                        src="/images/brand/sustainability.jpg"
-                        alt="Sustainable Materials"
+                        src="/images/brand/hoodies.jpg"
+                        alt="Hoodies Collection"
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-700"
                         quality={85}
                       />
                       <div className="absolute inset-0 bg-[#1E2A5A]/20 group-hover:bg-[#1E2A5A]/40 transition-colors duration-500" />
                    </div>
-                   <h3 className="font-bold text-2xl mb-2">Sustainable</h3>
+                   <h3 className="font-bold text-2xl mb-2">Hoodies</h3>
                    <p className="text-sm text-neutral-600">
-                     100% Organic Cotton from Portugal. Ethically sourced, mindfully crafted.
+                     Comfort meets style. Premium cotton hoodies for every season.
                    </p>
                 </motion.div>
 
-                {/* Limited */}
+                {/* T-Shirts */}
                 <motion.div 
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.4 }}
                   className="relative group"
                 >
                    <div className="aspect-[4/3] overflow-hidden rounded-sm mb-4 relative">
                       <Image
-                        src="/images/brand/craftsmanship.jpg"
-                        alt="Limited Edition Craftsmanship"
+                        src="/images/brand/tshirts.jpg"
+                        alt="T-Shirts Collection"
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-700"
                         quality={85}
                       />
                       <div className="absolute inset-0 bg-[#1E2A5A]/20 group-hover:bg-[#1E2A5A]/40 transition-colors duration-500" />
                    </div>
-                   <h3 className="font-bold text-2xl mb-2">Limited</h3>
+                   <h3 className="font-bold text-2xl mb-2">T-Shirts</h3>
                    <p className="text-sm text-neutral-600">
-                     Small batches to ensure exclusivity. Every piece tells a story.
+                     Essential basics reimagined. Soft, breathable, timeless.
+                   </p>
+                </motion.div>
+
+                {/* Sweatshirts */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.5 }}
+                  className="relative group"
+                >
+                   <div className="aspect-[4/3] overflow-hidden rounded-sm mb-4 relative">
+                      <Image
+                        src="/images/brand/sweatshirts.jpg"
+                        alt="Sweatshirts Collection"
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-700"
+                        quality={85}
+                      />
+                      <div className="absolute inset-0 bg-[#1E2A5A]/20 group-hover:bg-[#1E2A5A]/40 transition-colors duration-500" />
+                   </div>
+                   <h3 className="font-bold text-2xl mb-2">Sweatshirts</h3>
+                   <p className="text-sm text-neutral-600">
+                     Elevated loungewear. Crafted for comfort and conscious living.
                    </p>
                 </motion.div>
              </div>

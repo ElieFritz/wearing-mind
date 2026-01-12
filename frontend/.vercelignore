@@ -8,3 +8,7 @@ dist
 build
 coverage
 .turbo
+.vs
+*.vsidx
+*.suo
+*.user
