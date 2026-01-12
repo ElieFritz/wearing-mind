@@ -1,0 +1,20 @@
+# Robots.txt for WEARING MIND
+# https://frontend-iota-flax-11.vercel.app/robots.txt
+
+User-agent: *
+Allow: /
+Allow: /shop
+Allow: /shop/*
+Allow: /about
+Allow: /terms
+Allow: /privacy
+Allow: /shipping
+
+Disallow: /admin
+Disallow: /admin/*
+Disallow: /api/
+Disallow: /checkout
+Disallow: /order-success
+
+# Sitemaps
+Sitemap: https://frontend-iota-flax-11.vercel.app/sitemap.xml

@@ -1,0 +1,30 @@
+{
+  "name": "WEARING MIND - Premium Sustainable Streetwear",
+  "short_name": "WEARING MIND",
+  "description": "Exclusive sustainable streetwear collection. Premium hoodies, t-shirts & sweatshirts. Ethically made with organic cotton.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8F8FA",
+  "theme_color": "#1E2A5A",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["shopping", "fashion", "lifestyle"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "scope": "/",
+  "related_applications": [],
+  "prefer_related_applications": false
+}
